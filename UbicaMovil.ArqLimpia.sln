@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application Bussines Rules", "Application Bussines Rules", "{3672CC80-6FF7-40D4-B17E-90439BDE7B1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enterprise Bussines Rules", "Enterprise Bussines Rules", "{A297FB52-5B47-4C15-97FC-4997E2391FD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frameworks Drivers", "Frameworks Drivers", "{21EBBDBA-E60A-4390-B531-89B90ED81C86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interface Adapter", "Interface Adapter", "{3F1FF92D-51CB-474B-85BF-832BA937D007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UbicaMovil.ArqLimpia.UI.WebMVC", "UbicaMovil.ArqLimpia.UI.WebMVC\UbicaMovil.ArqLimpia.UI.WebMVC.csproj", "{94D9CE90-3999-4AD1-B286-8A6995681849}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UbicaMovil.ArqLimpia.BL", "UbicaMovil.ArqLimpia.BL\UbicaMovil.ArqLimpia.BL.csproj", "{105BE0AB-2748-4D3C-977C-19C2BFDC0EF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UbicaMovil.ArqLimpia.BL.DTOs", "UbicaMovil.ArqLimpia.BL.DTOs\UbicaMovil.ArqLimpia.BL.DTOs.csproj", "{3D031455-5BD8-4D3C-8053-01EC0B4163FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UbicaMovil.ArqLimpia.BL.Interfaces", "UbicaMovil.ArqLimpia.BL.Interfaces\UbicaMovil.ArqLimpia.BL.Interfaces.csproj", "{C69B4E82-EB76-4CB4-B2C0-7C09EC9F75DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UbicaMovil.ArqLimpia.EN", "UbicaMovil.ArqLimpia.EN\UbicaMovil.ArqLimpia.EN.csproj", "{C72A6823-3B5C-4FD6-BA4E-5BC17A5AB117}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UbicaMovil.ArqLimpia.EN.Interfaces", "UbicaMovil.ArqLimpia.EN.Interfaces\UbicaMovil.ArqLimpia.EN.Interfaces.csproj", "{4C62EA83-A66A-46B5-904E-42840FF9C711}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UbicaMovil.ArqLimpia.DAL", "UbicaMovil.ArqLimpia.DAL\UbicaMovil.ArqLimpia.DAL.csproj", "{EB3D4C76-4359-4249-B45A-E5AFEE68A8ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UbicaMovil.ArqLimpia.IcC", "UbicaMovil.ArqLimpia.IcC\UbicaMovil.ArqLimpia.IcC.csproj", "{824B1426-0008-4488-B284-294AF6A4E5F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94D9CE90-3999-4AD1-B286-8A6995681849}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D9CE90-3999-4AD1-B286-8A6995681849}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D9CE90-3999-4AD1-B286-8A6995681849}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D9CE90-3999-4AD1-B286-8A6995681849}.Release|Any CPU.Build.0 = Release|Any CPU
+		{105BE0AB-2748-4D3C-977C-19C2BFDC0EF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{105BE0AB-2748-4D3C-977C-19C2BFDC0EF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{105BE0AB-2748-4D3C-977C-19C2BFDC0EF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{105BE0AB-2748-4D3C-977C-19C2BFDC0EF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D031455-5BD8-4D3C-8053-01EC0B4163FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D031455-5BD8-4D3C-8053-01EC0B4163FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D031455-5BD8-4D3C-8053-01EC0B4163FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D031455-5BD8-4D3C-8053-01EC0B4163FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69B4E82-EB76-4CB4-B2C0-7C09EC9F75DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69B4E82-EB76-4CB4-B2C0-7C09EC9F75DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69B4E82-EB76-4CB4-B2C0-7C09EC9F75DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69B4E82-EB76-4CB4-B2C0-7C09EC9F75DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72A6823-3B5C-4FD6-BA4E-5BC17A5AB117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72A6823-3B5C-4FD6-BA4E-5BC17A5AB117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72A6823-3B5C-4FD6-BA4E-5BC17A5AB117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72A6823-3B5C-4FD6-BA4E-5BC17A5AB117}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C62EA83-A66A-46B5-904E-42840FF9C711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C62EA83-A66A-46B5-904E-42840FF9C711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C62EA83-A66A-46B5-904E-42840FF9C711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C62EA83-A66A-46B5-904E-42840FF9C711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB3D4C76-4359-4249-B45A-E5AFEE68A8ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB3D4C76-4359-4249-B45A-E5AFEE68A8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB3D4C76-4359-4249-B45A-E5AFEE68A8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB3D4C76-4359-4249-B45A-E5AFEE68A8ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{824B1426-0008-4488-B284-294AF6A4E5F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824B1426-0008-4488-B284-294AF6A4E5F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824B1426-0008-4488-B284-294AF6A4E5F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824B1426-0008-4488-B284-294AF6A4E5F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94D9CE90-3999-4AD1-B286-8A6995681849} = {21EBBDBA-E60A-4390-B531-89B90ED81C86}
+		{105BE0AB-2748-4D3C-977C-19C2BFDC0EF2} = {3672CC80-6FF7-40D4-B17E-90439BDE7B1E}
+		{3D031455-5BD8-4D3C-8053-01EC0B4163FE} = {3672CC80-6FF7-40D4-B17E-90439BDE7B1E}
+		{C69B4E82-EB76-4CB4-B2C0-7C09EC9F75DD} = {3672CC80-6FF7-40D4-B17E-90439BDE7B1E}
+		{C72A6823-3B5C-4FD6-BA4E-5BC17A5AB117} = {A297FB52-5B47-4C15-97FC-4997E2391FD9}
+		{4C62EA83-A66A-46B5-904E-42840FF9C711} = {A297FB52-5B47-4C15-97FC-4997E2391FD9}
+		{EB3D4C76-4359-4249-B45A-E5AFEE68A8ED} = {3F1FF92D-51CB-474B-85BF-832BA937D007}
+		{824B1426-0008-4488-B284-294AF6A4E5F0} = {3F1FF92D-51CB-474B-85BF-832BA937D007}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D85E4984-7C4A-45A7-9BA9-F7E5F6E3326F}
+	EndGlobalSection
+EndGlobal
