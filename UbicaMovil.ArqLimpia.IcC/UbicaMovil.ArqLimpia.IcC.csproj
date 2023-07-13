@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UbicaMovil.ArqLimpia.BL\UbicaMovil.ArqLimpia.BL.csproj" />
+    <ProjectReference Include="..\UbicaMovil.ArqLimpia.DAL\UbicaMovil.ArqLimpia.DAL.csproj" />
+  </ItemGroup>
+
 </Project>

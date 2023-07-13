@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 
 namespace UbicaMovil.ArqLimpia.DAL
 {
-    public class DependecyContainer
+    public static class DependecyContainer
     {
         public static IServiceCollection AddDALDependecies(this IServiceCollection services, IConfiguration configuration)
         {
@@ -24,3 +24,4 @@ namespace UbicaMovil.ArqLimpia.DAL
             return services;
         }
     }
+}

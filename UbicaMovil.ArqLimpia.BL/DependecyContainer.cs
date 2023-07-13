@@ -4,9 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using Microsoft.Extensions.DependencyInjection;
+using UbicaMovil.ArqLimpia.BL.Interfaces;
+using UbicaMovil.ArqLimpia.EN.Interfaces;
+using UbicaMovil.ArqLimpia.EN;
+using UbicaMovil.ArqLimpia.BL.Interfaces;
+
 namespace UbicaMovil.ArqLimpia.BL
 {
-    public class DependecyContainer
+    public static class DependecyContainer
     {
+        public static IServiceCollection AddBLDependecies(this IServiceCollection services)
+        {
+            services.AddTransient<IEmpresaBL, EmpresaBL>();
+
+            return services;
+        }
     }
 }
