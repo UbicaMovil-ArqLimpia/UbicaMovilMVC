@@ -16,5 +16,6 @@ namespace UbicaMovil.ArqLimpia.DAL
         public UbicaMovilDBContext(DbContextOptions<UbicaMovilDBContext> options) : base(options) { }
 
         public DbSet<Empresa> Empresas { get; set; }
+        public DbSet<Categoria> Categoria { get;  set; }
     }
 }
