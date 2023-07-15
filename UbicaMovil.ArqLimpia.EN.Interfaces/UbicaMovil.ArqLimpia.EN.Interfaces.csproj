@@ -10,12 +10,4 @@
     <ProjectReference Include="..\UbicaMovil.ArqLimpia.EN\UbicaMovil.ArqLimpia.EN.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <EditorConfigFiles Remove="C:\Users\alexa\Desktop\UbicaMovil\UbicaMovil.ArqLimpia.EN.Interfaces\.editorconfig" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="C:\Users\alexa\Desktop\UbicaMovil\UbicaMovil.ArqLimpia.EN.Interfaces\.editorconfig" />
-  </ItemGroup>
-
 </Project>
