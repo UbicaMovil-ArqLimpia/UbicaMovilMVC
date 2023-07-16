@@ -6,4 +6,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UbicaMovil.ArqLimpia.BL.DTOs\UbicaMovil.ArqLimpia.BL.DTOs.csproj" />
+    <ProjectReference Include="..\UbicaMovil.ArqLimpia.BL.Interfaces\UbicaMovil.ArqLimpia.BL.Interfaces.csproj" />
+    <ProjectReference Include="..\UbicaMovil.ArqLimpia.IcC\UbicaMovil.ArqLimpia.IcC.csproj" />
+  </ItemGroup>
+
 </Project>

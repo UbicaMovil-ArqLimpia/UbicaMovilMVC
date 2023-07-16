@@ -21,6 +21,7 @@ namespace UbicaMovil.ArqLimpia.DAL
             options.UseSqlServer(configuration.GetConnectionString("conexionGQ")));
 
             services.AddScoped<IEmpresa, EmpresaDAL>();
+            services.AddScoped<ICategoria, CategoriaDAL>();
             return services;
         }
     }
