@@ -9,11 +9,11 @@ namespace UbicaMovil.ArqLimpia.BL.Interfaces
 {
     public interface ICategoriaBL
     {
-        Task<int> Create(CategoriaAddDTO categoria);
-        Task<int> Update(CategoriaAddDTO categoria);
+        Task<int> Create(CategoriaAddDTO pCategoria);
+        Task<int> Update(CategoriaUpdateDTO pCategoria);
         Task<int> Delete(int id);
         Task<CategoriaGetByIdDTO> GetById(int id);
         Task<List<CategoriaGetAllDTO>> GetAll();
-        Task<List<CategoriaSearchOutputDTO>> Search(CategoriaSearchInputDTO categoria);
+        Task<List<CategoriaSearchOutputDTO>> Search(CategoriaSearchInputDTO pCategoria);
     }
 }

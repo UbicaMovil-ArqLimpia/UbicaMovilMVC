@@ -11,7 +11,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace UbicaMovil.ArqLimpia.IcC
 {
-    public class DependecyContainer
+    public static class DependecyContainer
     {
         public static IServiceCollection AddProyectDEpendecies(this IServiceCollection services, IConfiguration configuration)
         {

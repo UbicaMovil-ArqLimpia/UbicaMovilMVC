@@ -16,6 +16,6 @@ namespace UbicaMovil.ArqLimpia.EN
         public DateTime HoraSalida { get; set; }
         public decimal Latitud { get; set; }
         public decimal Longitud { get; set; }
-        public string IdCategoria { get; set; }
+        public int IdCategoria { get; set; }
     }
 }

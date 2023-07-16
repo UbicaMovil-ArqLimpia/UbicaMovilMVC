@@ -31,12 +31,12 @@ namespace UbicaMovil.ArqLimpia.DAL
 
         public async Task<List<Categoria>> GetAll()
         {
-            return await dbContext.Categoria.ToListAsync();
+            return await dbContext.Categorias.ToListAsync();
         }
 
         public async Task<Categoria> GetById(int Id)
         {
-            Categoria? categoria = await dbContext.Categoria.FirstOrDefaultAsync(s => s.Id == Id);
+            Categoria? categoria = await dbContext.Categorias.FirstOrDefaultAsync(s => s.Id == Id);
             if (categoria != null)
                 return categoria;
             else
@@ -45,9 +45,9 @@ namespace UbicaMovil.ArqLimpia.DAL
 
         public Task<List<Categoria>> Search(Categoria categoria)
         {
-            var query = dbContext.Categoria.AsQueryable();
-            if (!string.IsNullOrWhiteSpace(categoria.Name))
-                query = query.Where(s => s.Name.Contains(categoria.Name));
+            var query = dbContext.Categorias.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(categoria.Nombre))
+                query = query.Where(s => s.Nombre.Contains(categoria.Nombre));
             return query.ToListAsync();
         }
 

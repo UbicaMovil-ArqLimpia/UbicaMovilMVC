@@ -11,11 +11,9 @@ namespace UbicaMovil.ArqLimpia.DAL
 {
     public class UbicaMovilDBContext : DbContext
     {
-        internal readonly object Empresa;
-
         public UbicaMovilDBContext(DbContextOptions<UbicaMovilDBContext> options) : base(options) { }
 
         public DbSet<Empresa> Empresas { get; set; }
-        public DbSet<Categoria> Categoria { get;  set; }
+        public DbSet<Categoria> Categorias { get;  set; }
     }
 }

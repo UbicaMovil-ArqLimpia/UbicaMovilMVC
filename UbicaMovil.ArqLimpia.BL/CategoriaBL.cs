@@ -6,49 +6,88 @@ using System.Threading.Tasks;
 using UbicaMovil.ArqLimpia.BL.Interfaces;
 using UbicaMovil.ArqLimpia.EN;
 using UbicaMovil.ArqLimpia.EN.Interfaces;
-using UbicaMovil.ArqLimpia.BL.DTOs.EmpreaDTOs;
+using UbicaMovil.ArqLimpia.BL.DTOs.CategoriaDTOs;
 
 namespace UbicaMovil.ArqLimpia.BL
 {
-    public class CategoriaBL : ICategoria
+    public class CategoriaBL : ICategoriaBL
     {
         readonly ICategoria _categoriaDAL;
-        readonly IUnitOfWork _unitOfWork;
+        readonly IUnitOfWork _unitWork;
 
-        public CategoriaBL(ICategoria categoriaDAL, IUnitOfWork unitOfWork)
+        public CategoriaBL(ICategoria categoriaDAL, IUnitOfWork unitWork)
         {
             _categoriaDAL = categoriaDAL;
-            _unitOfWork = unitOfWork;
+            _unitWork = unitWork;
         }
 
-        public void Create(Categoria categoria)
+        public async Task<int> Create(CategoriaAddDTO pUser)
         {
-            throw new NotImplementedException();
+            Categoria categoriaDAL = new Categoria()
+            {
+                Nombre = pUser.Nombre
+            };
+            _categoriaDAL.Create(categoriaDAL);
+            return await _unitWork.SaveChangesAsync();
         }
 
-        public void Delete(Categoria categoria)
+        public async Task<int> Delete(int Id)
         {
-            throw new NotImplementedException();
+            Categoria categoriaEN = await _categoriaDAL.GetById(Id);
+            if (categoriaEN.Id == Id)
+            {
+                _categoriaDAL.Delete(categoriaEN);
+                return await _unitWork.SaveChangesAsync();
+            }
+            else
+                return 0;
         }
 
-        public Task<List<Categoria>> GetAll()
+        public async Task<List<CategoriaGetAllDTO>> GetAll()
         {
-            throw new NotImplementedException();
+            List<Categoria> categorias = await _categoriaDAL.GetAll();
+            List<CategoriaGetAllDTO> list = new List<CategoriaGetAllDTO>();
+            categorias.ForEach(s => list.Add(new CategoriaGetAllDTO
+            {
+                Id = s.Id,
+                Nombre = s.Nombre
+            }));
+            return list;
         }
 
-        public Task<Categoria> GetById(int Id)
+        public async Task<CategoriaGetByIdDTO> GetById(int Id)
         {
-            throw new NotImplementedException();
+            Categoria categoriaEN = await _categoriaDAL.GetById(Id);
+            return new CategoriaGetByIdDTO()
+            {
+                Id = categoriaEN.Id,
+                Nombre = categoriaEN.Nombre
+            };
         }
 
-        public Task<List<Categoria>> Search(Categoria categoria)
+        public async Task<List<CategoriaSearchOutputDTO>> Search(CategoriaSearchInputDTO pUser)
         {
-            throw new NotImplementedException();
+            List<Categoria> categorias = await _categoriaDAL.Search(new Categoria { Id = pUser.Id, Nombre = pUser.Nombre });
+            List<CategoriaSearchOutputDTO> list = new List<CategoriaSearchOutputDTO>();
+            categorias.ForEach(s => list.Add(new CategoriaSearchOutputDTO
+            {
+                Id = s.Id,
+                Nombre = s.Nombre
+            }));
+            return list;
         }
 
-        public void Update(Categoria categoria)
+        public async Task<int> Update(CategoriaUpdateDTO pUser)
         {
-            throw new NotImplementedException();
+            Categoria categoriaEN = await _categoriaDAL.GetById(pUser.Id);
+            if (categoriaEN.Id == pUser.Id)
+            {
+                categoriaEN.Nombre = pUser.Nombre;
+                _categoriaDAL.Update(categoriaEN);
+                return await _unitWork.SaveChangesAsync();
+            }
+            else
+                return 0;
         }
     }
 }

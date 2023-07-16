@@ -3,51 +3,49 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using UbicaMovil.ArqLimpia.BL.Interfaces;
 using UbicaMovil.ArqLimpia.EN;
 using UbicaMovil.ArqLimpia.EN.Interfaces;
-using UbicaMovil.ArqLimpia.BL.DTOs.EmpreaDTOs;
+using UbicaMovil.ArqLimpia.BL.DTOs.EmpresaDTOs;
 
 namespace UbicaMovil.ArqLimpia.BL
 {
     public class EmpresaBL : IEmpresaBL
     {
         readonly IEmpresa _empresaDAL;
-        readonly IUnitOfWork _unitOfWork;
+        readonly IUnitOfWork _unitWork;
 
-        public EmpresaBL(IEmpresaBL empresaDAL, IUnitOfWork unitOfWork)
+        public EmpresaBL(IEmpresa empresaDAL, IUnitOfWork unitWork)
         {
             _empresaDAL = empresaDAL;
-            _unitOfWork = unitOfWork;
+            _unitWork = unitWork;
         }
 
-        public async Task<int> Create(EmpresaAddDTO empresa)
+        public async Task<int> Create(EmpresaAddDTO pUser)
         {
             Empresa empresaDAL = new Empresa()
             {
-                Id = empresa.Id,
-                Nombre = empresa.Nombre,
-                Direccion = empresa.Direccion,
-                Telefono = empresa.Telefono,
-                HoraEntrada = empresa.HoraEntrada,
-                HoraSalida = empresa.HoraSalida,
-                Latitud = empresa.Latitud,
-                Longitud = empresa.Longitud,
-                IdCategoria = empresa.IdCategoria,
+                Nombre = pUser.Nombre,
+                Direccion = pUser.Direccion,
+                Telefono = pUser.Telefono,
+                HoraEntrada = pUser.HoraEntrada,
+                HoraSalida = pUser.HoraSalida,
+                Latitud = pUser.Latitud,
+                Longitud = pUser.Longitud,
+                IdCategoria = pUser.IdCategoria
             };
-
             _empresaDAL.Create(empresaDAL);
-            return await _unitOfWork.SaveChangesAsync();
-
+            return await _unitWork.SaveChangesAsync();
         }
 
-        public async Task<int>Delete(int Id)
+        public async Task<int> Delete(int Id)
         {
             Empresa empresaEN = await _empresaDAL.GetById(Id);
             if (empresaEN.Id == Id)
             {
                 _empresaDAL.Delete(empresaEN);
-                return await _unitOfWork.SaveChangesAsync();
+                return await _unitWork.SaveChangesAsync();
             }
             else
                 return 0;
@@ -61,6 +59,13 @@ namespace UbicaMovil.ArqLimpia.BL
             {
                 Id = s.Id,
                 Nombre = s.Nombre,
+                Direccion = s.Direccion,
+                Telefono = s.Telefono,
+                HoraEntrada = s.HoraEntrada,
+                HoraSalida = s.HoraSalida,
+                Latitud = s.Latitud,
+                Longitud = s.Longitud,
+                IdCategoria = s.IdCategoria
             }));
             return list;
         }
@@ -72,30 +77,51 @@ namespace UbicaMovil.ArqLimpia.BL
             {
                 Id = empresaEN.Id,
                 Nombre = empresaEN.Nombre,
+                Direccion = empresaEN.Direccion,
+                Telefono = empresaEN.Telefono,
+                HoraEntrada = empresaEN.HoraEntrada,
+                HoraSalida = empresaEN.HoraSalida,
+                Latitud = empresaEN.Latitud,
+                Longitud = empresaEN.Longitud,
+                IdCategoria = empresaEN.IdCategoria
 
             };
         }
 
-        public async Task<List<EmpresaSearchOutputDTO>> Search(EmpresaSearchInputDTO empresa)
+        public async Task<List<EmpresaSearchOutputDTO>> Search(EmpresaSearchInputDTO pUser)
         {
-            List<Empresa> empresa = await _empresaDAL.Search(new Empresa { Id = empresa.Id, Nombre = empresa.Name });
+            List<Empresa> empresas = await _empresaDAL.Search(new Empresa { Id = pUser.Id, Nombre = pUser.Nombre, Direccion = pUser.Direccion });
             List<EmpresaSearchOutputDTO> list = new List<EmpresaSearchOutputDTO>();
-            empresa.ForEach(s => list.Add(new EmpresaSearchOutputDTO
+            empresas.ForEach(s => list.Add(new EmpresaSearchOutputDTO
             {
                 Id = s.Id,
-                Nombre = s.Nombre
-            })); ;
+                Nombre = s.Nombre,
+                Direccion = s.Direccion,
+                Telefono = s.Telefono,
+                HoraEntrada = s.HoraEntrada,
+                HoraSalida = s.HoraSalida,
+                Latitud = s.Latitud,
+                Longitud = s.Longitud,
+                IdCategoria = s.IdCategoria
+            }));
             return list;
         }
 
-        public async Task<int> Update(EmpresaUpdateDTO empresa)
+        public async Task<int> Update(EmpresaUpdateDTO pUser)
         {
-            Empresa empresaEN = await _empresaDAL.GetById(empresa.Id);
-            if (empresaEN.Id == empresa.Id)
+            Empresa empresaEN = await _empresaDAL.GetById(pUser.Id);
+            if (empresaEN.Id == pUser.Id)
             {
-                empresaEN.Nombre = empresa.Nombre;
+                empresaEN.Nombre = pUser.Nombre;
+                empresaEN.Direccion = pUser.Direccion;
+                empresaEN.Telefono = pUser.Telefono;
+                empresaEN.HoraEntrada = pUser.HoraEntrada;
+                empresaEN.HoraSalida = pUser.HoraSalida;
+                empresaEN.Latitud = pUser.Latitud;
+                empresaEN.Longitud = pUser.Longitud;
+                empresaEN.IdCategoria = pUser.IdCategoria;
                 _empresaDAL.Update(empresaEN);
-                return await _unitOfWork.SaveChangesAsync();
+                return await _unitWork.SaveChangesAsync();
             }
             else
                 return 0;
