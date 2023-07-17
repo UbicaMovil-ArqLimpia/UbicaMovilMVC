@@ -23,6 +23,11 @@ namespace UbicaMovil.ArqLimpia.UI.WebMVC.Controllers
             return View();
         }
 
+        public IActionResult Agregar()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
