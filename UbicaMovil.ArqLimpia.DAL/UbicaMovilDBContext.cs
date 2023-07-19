@@ -10,8 +10,10 @@ using UbicaMovil.ArqLimpia.EN;
 namespace UbicaMovil.ArqLimpia.DAL
 {
     public class UbicaMovilDBContext : DbContext
-    {   
-        public UbicaMovilDBContext(DbContextOptions<UbicaMovilDBContext> options) : base(options) { }
+    {
+        public UbicaMovilDBContext(DbContextOptions<UbicaMovilDBContext> options) : base(options)
+        {
+        }
 
         public DbSet<Empresa> Empresas { get; set; }
         public DbSet<Categoria> Categorias { get;  set; }

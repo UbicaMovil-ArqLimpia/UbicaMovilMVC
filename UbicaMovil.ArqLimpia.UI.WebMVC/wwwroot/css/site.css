@@ -1,18 +1,27 @@
-html {
-  font-size: 14px;
+/* Estilo para el contenedor del mapa */
+#map {
+    height: 400px;
+    width: 100%;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+/* Estilo para el contenedor de las indicaciones */
+#directions-panel {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+/* Estilo para ocultar las indicaciones y la ruta */
+.hidden {
+    display: none;
 }
 
-body {
-  margin-bottom: 60px;
+/* DISEÑO DE PAGINAS */
+#titulo {
+    color: #BD1616;
+}
+
+#lemma {
+    color: #000000;
 }

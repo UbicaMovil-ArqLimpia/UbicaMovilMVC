@@ -47,9 +47,7 @@ namespace UbicaMovil.ArqLimpia.DAL
         {
             var query = dbContext.Empresas.AsQueryable();
             if (!string.IsNullOrWhiteSpace(emperesa.Nombre))
-                query = query.Where(s => s.Nombre.Contains(emperesa.Nombre));
-            if (!string.IsNullOrWhiteSpace(emperesa.Direccion))
-                query = query.Where(s => s.Direccion.Contains(emperesa.Direccion));
+                query = query.Where(s => s.Nombre.Contains(emperesa.Nombre));S
             return query.ToListAsync();
         }
 

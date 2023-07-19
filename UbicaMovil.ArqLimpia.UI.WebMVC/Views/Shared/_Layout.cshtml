@@ -9,10 +9,15 @@
     <link rel="stylesheet" href="~/UbicaMovil.ArqLimpia.UI.WebMVC.styles.css" asp-append-version="true" />*@
 
     <link rel="stylesheet" href="~/css/xmain.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
 
 </head>
 <body class="hidden">
+
+    <!-- Script de la API de Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCum27trvMaz6TpLQlZzF7521lkn-4EPt0&libraries=places,directions"></script>
+
 
     @*Efecto de carga*@
     <div class="centrado" id="onload">
@@ -98,12 +103,16 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Mantenimiento</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Agregar">Agregar empresa</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Mantenimiento</a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Empresa" asp-action="Index">Empresas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Categoria" asp-action="Index">Categorias</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -124,8 +133,12 @@
         </div>
     </footer>
 
+    <!-- Inicializar el mapa al cargar la página -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCum27trvMaz6TpLQlZzF7521lkn-4EPt0&callback=initMap&libraries=places,directions"></script>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/codigo.js"></script>
+    <script src="~/js/site.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
