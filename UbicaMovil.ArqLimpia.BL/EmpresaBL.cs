@@ -90,7 +90,7 @@ namespace UbicaMovil.ArqLimpia.BL
 
         public async Task<List<EmpresaSearchOutputDTO>> Search(EmpresaSearchInputDTO pUser)
         {
-            List<Empresa> empresas = await _empresaDAL.Search(new Empresa { Id = pUser.Id, Nombre = pUser.Nombre, Direccion = pUser.Direccion });
+            List<Empresa> empresas = await _empresaDAL.Search(new Empresa { Id = pUser.Id, Nombre = pUser.Nombre });
             List<EmpresaSearchOutputDTO> list = new List<EmpresaSearchOutputDTO>();
             empresas.ForEach(s => list.Add(new EmpresaSearchOutputDTO
             {
