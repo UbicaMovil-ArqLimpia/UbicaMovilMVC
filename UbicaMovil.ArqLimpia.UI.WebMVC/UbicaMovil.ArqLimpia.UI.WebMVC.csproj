@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Rotativa.AspNetCore" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\UbicaMovil.ArqLimpia.BL.DTOs\UbicaMovil.ArqLimpia.BL.DTOs.csproj" />
     <ProjectReference Include="..\UbicaMovil.ArqLimpia.BL.Interfaces\UbicaMovil.ArqLimpia.BL.Interfaces.csproj" />
     <ProjectReference Include="..\UbicaMovil.ArqLimpia.IcC\UbicaMovil.ArqLimpia.IcC.csproj" />

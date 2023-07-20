@@ -29,8 +29,8 @@ namespace UbicaMovil.ArqLimpia.BL
                 Nombre = pUser.Nombre,
                 Direccion = pUser.Direccion,
                 Telefono = pUser.Telefono,
-                HoraEntrada = pUser.HoraEntrada,
-                HoraSalida = pUser.HoraSalida,
+                HorarioEntrada = pUser.HorarioEntrada,
+                HorarioSalida = pUser.HorarioSalida,
                 Latitud = pUser.Latitud,
                 Longitud = pUser.Longitud,
                 IdCategoria = pUser.IdCategoria
@@ -61,8 +61,8 @@ namespace UbicaMovil.ArqLimpia.BL
                 Nombre = s.Nombre,
                 Direccion = s.Direccion,
                 Telefono = s.Telefono,
-                HoraEntrada = s.HoraEntrada,
-                HoraSalida = s.HoraSalida,
+                HorarioEntrada = s.HorarioEntrada,
+                HorarioSalida = s.HorarioSalida,
                 Latitud = s.Latitud,
                 Longitud = s.Longitud,
                 IdCategoria = s.IdCategoria
@@ -79,8 +79,8 @@ namespace UbicaMovil.ArqLimpia.BL
                 Nombre = empresaEN.Nombre,
                 Direccion = empresaEN.Direccion,
                 Telefono = empresaEN.Telefono,
-                HoraEntrada = empresaEN.HoraEntrada,
-                HoraSalida = empresaEN.HoraSalida,
+                HorarioEntrada = empresaEN.HorarioEntrada,
+                HorarioSalida = empresaEN.HorarioSalida,
                 Latitud = empresaEN.Latitud,
                 Longitud = empresaEN.Longitud,
                 IdCategoria = empresaEN.IdCategoria
@@ -98,8 +98,8 @@ namespace UbicaMovil.ArqLimpia.BL
                 Nombre = s.Nombre,
                 Direccion = s.Direccion,
                 Telefono = s.Telefono,
-                HoraEntrada = s.HoraEntrada,
-                HoraSalida = s.HoraSalida,
+                HorarioEntrada = s.HorarioEntrada,
+                HorarioSalida = s.HorarioSalida,
                 Latitud = s.Latitud,
                 Longitud = s.Longitud,
                 IdCategoria = s.IdCategoria
@@ -115,8 +115,8 @@ namespace UbicaMovil.ArqLimpia.BL
                 empresaEN.Nombre = pUser.Nombre;
                 empresaEN.Direccion = pUser.Direccion;
                 empresaEN.Telefono = pUser.Telefono;
-                empresaEN.HoraEntrada = pUser.HoraEntrada;
-                empresaEN.HoraSalida = pUser.HoraSalida;
+                empresaEN.HorarioEntrada = pUser.HorarioEntrada;
+                empresaEN.HorarioSalida = pUser.HorarioSalida;
                 empresaEN.Latitud = pUser.Latitud;
                 empresaEN.Longitud = pUser.Longitud;
                 empresaEN.IdCategoria = pUser.IdCategoria;

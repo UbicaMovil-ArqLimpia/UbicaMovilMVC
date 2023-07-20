@@ -15,6 +15,6 @@ namespace UbicaMovil.ArqLimpia.BL.Interfaces
         Task<int> Delete(int id);
         Task<CategoriaGetByIdDTO> GetById(int id);
         Task<List<CategoriaGetAllDTO>> GetAll();
-        Task<List<CategoriaSearchOutputDTO>> Search(CategoriaSearchInputDTO pCategoria);
+        public Task<List<CategoriaSearchOutputDTO>> Search(CategoriaSearchInputDTO pCategoria);
     }
 }

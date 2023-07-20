@@ -12,8 +12,8 @@ namespace UbicaMovil.ArqLimpia.BL.DTOs.EmpresaDTOs
         public string Nombre { get; set; }
         public string Direccion { get; set; }
         public string Telefono { get; set; }
-        public DateTime HoraEntrada { get; set; }
-        public DateTime HoraSalida { get; set; }
+        public string HorarioEntrada { get; set; }
+        public string HorarioSalida { get; set; }
         public decimal Latitud { get; set; }
         public decimal Longitud { get; set; }
         public int IdCategoria { get; set; }

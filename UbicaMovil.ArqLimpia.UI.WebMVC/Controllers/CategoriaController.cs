@@ -15,10 +15,9 @@ namespace UbicaMovil.ArqLimpia.UI.WebMVC.Controllers
             _BL = BL;
         }
 
-        public async Task<IActionResult> Index(CategoriaSearchInputDTO inputDTO)
+        public async Task<IActionResult> Index(CategoriaSearchInputDTO categoria)
         {
-            var list = await _BL.Search(inputDTO);
-            return View(list);
+            return View(await _BL.Search(categoria));
         }
 
         public async Task<IActionResult> Details(int id)

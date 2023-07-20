@@ -16,6 +16,8 @@ namespace UbicaMovil.ArqLimpia.BL
         public static IServiceCollection AddBLDependecies(this IServiceCollection services)
         {
             services.AddTransient<IEmpresaBL, EmpresaBL>();
+            services.AddTransient<ICategoriaBL, CategoriaBL>();
+
 
             return services;
         }

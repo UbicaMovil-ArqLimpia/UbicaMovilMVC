@@ -15,10 +15,9 @@ namespace UbicaMovil.ArqLimpia.UI.WebMVC.Controllers
             _BL = BL;
         }
 
-        public async Task<IActionResult> Index(EmpresaSearchInputDTO inputDTO)
+        public async Task<IActionResult> Index(EmpresaSearchInputDTO input)
         {
-            var list = await _BL.Search(inputDTO);
-            return View(list);
+            return View(await _BL.Search(input));
         }
 
         public async Task<IActionResult> Details(int id)
@@ -63,8 +62,8 @@ namespace UbicaMovil.ArqLimpia.UI.WebMVC.Controllers
                 Nombre = getByIdDTO.Nombre,
                 Direccion = getByIdDTO.Direccion,
                 Telefono = getByIdDTO.Telefono,
-                HoraEntrada = getByIdDTO.HoraEntrada,
-                HoraSalida = getByIdDTO.HoraSalida,
+                HorarioEntrada = getByIdDTO.HorarioEntrada,
+                HorarioSalida = getByIdDTO.HorarioSalida,
                 Latitud = getByIdDTO.Latitud,
                 Longitud = getByIdDTO.Longitud,
                 IdCategoria = getByIdDTO.IdCategoria
