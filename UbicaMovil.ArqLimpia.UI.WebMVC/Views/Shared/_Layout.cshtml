@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="~/css/xmain.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="~/json/Manifest.json" />
 
 </head>
 <body class="hidden">
@@ -142,6 +143,21 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/style.js"></script>
+    <script src="~/js/Service-worker.js"></script>
+    <script src="~/json/Manifest.json"></script>
+    <script>
+        if ('Serviceworker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/Service-worker.js')
+                    .then(function (registration) {
+                        console.log('Service worker registrado con exito', registration);
+                    })
+                    .catch(function (error) {
+                        console.log('Error al registrar el Service worker:', error);
+                    });
+            }
+                }
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

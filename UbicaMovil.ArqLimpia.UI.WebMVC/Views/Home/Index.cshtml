@@ -26,3 +26,18 @@
 <!-- Elemento contenedor de las indiaciones -->
 <div id="directions-panel" class="hidden"></div>
 </div>
+
+<body>
+    <button id="butInstall" aria-label="Install" hidden>Instalar app</button>
+    <div id="main"></div>
+
+    <script>
+        if ('ServiceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('Service-worker.js').then((reg) => {
+                    console.log("Service worker registered", reg);
+                })
+            })
+        }
+    </script>
+</body>

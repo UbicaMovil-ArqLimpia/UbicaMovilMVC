@@ -1,0 +1,65 @@
+{
+	"short_name": "Ubica Móvil",
+	"name": "Ubica Móvil",
+	"icons": [
+		{
+			"src": "/img/imagen.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/img/imagen2.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		},
+		{
+			"src": "/img/Instagram.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/https://localhost:7170/",
+	"background_color": "#3367D6",
+	"display": "standalone",
+	//"scope": "/",
+	"theme_color": "#3367D6",
+	"shortcuts": [
+		{
+			"name": "Ubica Móvil",
+			"short_name": "Ubica Móvil",
+			"description": "App de geolocalización",
+			"url": "/https://localhost:7170/",
+			"icons": [
+				{
+					"src": "/img/Pacman_HD.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "Ubica Móvil",
+			"short_name": "Ubica Móvil",
+			"description": "App de geolocacización",
+			"url": "/https://localhost:7170/",
+			"icons": [
+				{
+					"src": "/img/whatsapp.png",
+					"sizes": "192x192"
+				}
+			]
+		}
+	],
+	"description": "App Móvil de geolocacicación",
+	"screenshots": [
+		{
+			"src": "/images/Pacman_HD.png",
+			"type": "image/png",
+			"sizes": "540x720"
+		},
+		{
+			"src": "/img/Instagram.png",
+			"type": "image/png",
+			"sizes": "540x720"
+		}
+	]
+}

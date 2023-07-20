@@ -16,4 +16,8 @@
     <ProjectReference Include="..\UbicaMovil.ArqLimpia.IcC\UbicaMovil.ArqLimpia.IcC.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
 </Project>
