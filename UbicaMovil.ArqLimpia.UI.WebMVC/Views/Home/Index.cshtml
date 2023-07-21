@@ -2,6 +2,7 @@
     ViewData["Title"] = "";
 }
 
+<link href="~/css/not.css" rel="stylesheet">
 <div class="container">
     <h1 class="text-center pt-3" id="titulo"><Strong>UbicaMovil</Strong></h1>
 <p class="text-center fw-normal fs-5" id="lema">
@@ -40,4 +41,15 @@
             })
         }
     </script>
+
+    <div id="cookie-notice" class="cookie-notification">
+        <div class="container">
+
+            <div class="wp-block-column cookie-content">
+                <div class="ct-cookies-content">Descarga gratis UbicaMovil para Android. Todos los mapas en tu bolsillo</div>
+            </div>
+            <button class="ct-accept" onclick="acceptCookie();">Descargar</button><button class="ct-close" onclick="myFunction()">×</button>
+        </div>
+    </div>
+    <script src="~/js/not.js"></script>
 </body>
