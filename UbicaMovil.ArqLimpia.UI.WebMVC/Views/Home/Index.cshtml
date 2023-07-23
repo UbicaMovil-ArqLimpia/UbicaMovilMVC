@@ -2,11 +2,6 @@
     ViewData["Title"] = "";
 }
 
-<link rel="stylesheet" href="~/css/site.css" />
-
-<!-- Script de la API de Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCum27trvMaz6TpLQlZzF7521lkn-4EPt0&libraries=places,directions"></script>
-
 <div class="container">
     <h2 class="text-center pt-5 mt-2" style="color:#393939; font-family:'Segoe UI';">
         <Strong>UbicaMovil</Strong>
@@ -82,4 +77,15 @@
             })
         }
     </script>
+
+    <div id="cookie-notice" class="cookie-notification">
+        <div class="container">
+
+            <div class="wp-block-column cookie-content">
+                <div class="ct-cookies-content">Descarga gratis UbicaMovil para Android. Todos los mapas en tu bolsillo</div>
+            </div>
+            <button class="ct-accept" onclick="acceptCookie();">Descargar</button><button class="ct-close" onclick="myFunction()">×</button>
+        </div>
+    </div>
+    <script src="~/js/not.js"></script>
 </body>
