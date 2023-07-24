@@ -22,6 +22,19 @@ function initMap() {
         position: { lat: 0, lng: 0 } // Ubicación inicial del marcador
     });
 
+    // Obtener los datos de los marcadores desde el backend (get_markers.php)
+    fetch("../php/get_locations.php")
+        .then(response => response.json())
+        .then(localidad => {
+            console.log(localidad);
+            // Colocar los marcadores en el mapa
+            localidad.forEach(marker => {
+                addMarker({ lat: parseFloat(marker.latitud), lng: parseFloat(marker.longitud) }, marker.Nombre);
+            });
+        })
+        .catch(error => {
+            console.error("Error al obtener los datos:", error);
+        });
     // Obtener la ubicación actual del usuario
     if (navigator.geolocation) {
         updateMyLocation(); // Actualizar la ubicación inicial
