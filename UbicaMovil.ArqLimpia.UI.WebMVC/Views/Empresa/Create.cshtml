@@ -3,67 +3,80 @@
 @{
     ViewData["Title"] = "Agregar - ";
 }
-<!-- Icons font CSS-->
-<link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-<link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+
 <!-- Font special for pages-->
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-<!-- Vendor CSS-->
-<link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-<link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-<!-- Main CSS-->
-<link href="~/css/xmain.css" rel="stylesheet" media="all">
 
-<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
-    <div class="wrapper wrapper--w780">
-        <div class="card card-3">
-            <div class="card-heading"></div>
-            <div class="card-body">
-                <h2 class="title">Cree una nueva empresas</h2>
-                <form method="POST">
-                    <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Nombre" name="nombre">
-                    </div>
-                    <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Direccion" name="Direccion">
-                    </div>
-                    <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Telefono" name="Telefono">
-                    </div>
-                    <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Horario de entrada" name="HorarioEntrada">
-                    </div>
-                    <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Horario de salida" name="HorarioSalida">
-                    </div>
-                    <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Latitud" name="Latitud">
-                    </div>
-                    <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="Longitud" name="Longitud">
-                    </div>
-                    <div class="input-group">
-                        <input class="input--style-3" type="text" placeholder="IdCategoria" name="IdCategoria">
-                    </div>
-                    <div class="p-t-10">
-                        <button class="btn btn--pill" style="background: #57b846;" type="submit">Guardar</button>
-                        <a class="btn btn--pill btn-outline-success" asp-action="Index">Cancelar</a><br />
-                        <span style="color:red">@ViewBag.ErrorMessage</span>
-                    </div>
-                </form>
+<link href="~/css/xmain.css" rel="stylesheet">
+<link href="~/css/style.css" rel="stylesheet">
+
+<div class="py-5 bg-blue font-poppins">
+    <div class="container py-md-5" id="x">
+        <div class="container-md">
+            <div class="card bg-dark text-white px-3 pt-2">
+                <div class="card-body">
+                    <h4 class="fs-3 text-center fw-bolder pt-5">Crea una empresa</h4>
+                    <form method="POST">
+                        <div class="pt-5">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label class="form-label">Nombre</label>
+                                    <input name="Nombre" type="text" class="form-control" id="nombre">
+                                    <span validation-for="Nombre" class="text-danger"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Dirección</label>
+                                    <input name="Direccion" type="text" class="form-control" id="direccion">
+                                    <span validation-for="Direccion" class="text-danger"></span>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Teléfono</label>
+                                    <input name="Telefono" type="text" class="form-control" id="telefono">
+                                    <span validation-for="Telefono" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Hora de apertura</label>
+                                    <input name="HorarioEntrada" type="time" class="form-control" id="horaEntrada">
+                                    <span validation-for="HorarioEntrada" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Hora de cierre</label>
+                                    <input name="HorarioSalida" type="time" class="form-control" id="horaSalida">
+                                    <span validation-for="HorarioSalida" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-5">
+                                    <label class="form-label">Latitud</label>
+                                    <input name="Latitud" type="text" class="form-control" id="latitud">
+                                    <span validation-for="Latitud" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-5">
+                                    <label class="form-label">Longitud</label>
+                                    <input name="Longitud" type="text" class="form-control" id="longitud">
+                                    <span validation-for="Longitud" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label">Categoria</label>
+                                    <input name="IdCategoria" type="number" class="form-control" id="idCategoria">
+                                    <span validation-for="IdCategoria" class="text-danger"></span>
+                                </div>
+                                <div class="col-12 text-center py-3">
+                                    <button type="submit" class="btn btn-info">Guardar</button>
+                                    <a class="btn btn-outline-primary" asp-action="Index">Regresar</a><br />
+                                    <span style="color:red">@ViewBag.ErrorMessage</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="mapa"></div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Jquery JS-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<!-- Vendor JS-->
-<script src="vendor/select2/select2.min.js"></script>
-<script src="vendor/datepicker/moment.min.js"></script>
-<script src="vendor/datepicker/daterangepicker.js"></script>
-<!-- Main JS-->
-<script src="js/global.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCum27trvMaz6TpLQlZzF7521lkn-4EPt0&libraries=places&callback=inicializarMapa" async defer></script>
+
+<script src="~/js/style.js"></script>
 
 @section Scripts {
     @{

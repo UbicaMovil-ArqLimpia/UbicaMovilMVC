@@ -1,19 +1,19 @@
 {
-	"short_name": "Ubica Móvil",
-	"name": "Ubica Móvil",
+	"short_name": "UbicaMovil",
+	"name": "UbicaMovil",
 	"icons": [
 		{
-			"src": "/img/imagen.png",
+			"src": "/img/Ubicacion512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		},
 		{
-			"src": "/img/imagen2.png",
+			"src": "/img/Ubicacion192.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "/img/Instagram.png",
+			"src": "/img/Ubicacion512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		}
@@ -25,25 +25,25 @@
 	"theme_color": "#3367D6",
 	"shortcuts": [
 		{
-			"name": "Ubica Móvil",
-			"short_name": "Ubica Móvil",
+			"name": "UbicaMovil",
+			"short_name": "UbicaMovil",
 			"description": "App de geolocalización",
 			"url": "/https://localhost:7170/",
 			"icons": [
 				{
-					"src": "/img/Pacman_HD.png",
+					"src": "/img/Ubicacion192.png",
 					"sizes": "192x192"
 				}
 			]
 		},
 		{
-			"name": "Ubica Móvil",
-			"short_name": "Ubica Móvil",
+			"name": "UbicaMovil",
+			"short_name": "UbicaMovil",
 			"description": "App de geolocacización",
 			"url": "/https://localhost:7170/",
 			"icons": [
 				{
-					"src": "/img/whatsapp.png",
+					"src": "/img/Ubicacion192.png",
 					"sizes": "192x192"
 				}
 			]
@@ -52,12 +52,12 @@
 	"description": "App Móvil de geolocacicación",
 	"screenshots": [
 		{
-			"src": "/images/Pacman_HD.png",
+			"src": "/images/Captura1.png",
 			"type": "image/png",
 			"sizes": "540x720"
 		},
 		{
-			"src": "/img/Instagram.png",
+			"src": "/img/Captura2.png",
 			"type": "image/png",
 			"sizes": "540x720"
 		}

@@ -8,73 +8,69 @@
 <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
 <!-- Font special for pages-->
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-<!-- Vendor CSS-->
-<link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-<link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-<!-- Main CSS-->
+
 <link href="~/css/xmain.css" rel="stylesheet" media="all">
 
-<div class="page-wrapper bg-gra-x p-t-100 p-b-100 font-poppins">
-    <div class="wrapper wrapper--w780">
-        <div class="card card-3">
-            <div class="card-heading"></div>
-            <div class="card-body">
-                <h2 class="title text-center">Categorias de empresas</h2>
-                <form asp-action="Index">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label class="control-label text-white">Nombre</label>
-                                <input type="text" name="Nombre" class="form-control" />
+<div class="py-5 bg-gra-x font-poppins">
+    <div class="container py-md-5" id="x">
+        <div class="container-md">
+            <div class="card bg-dark text-center text-white px-3 pt-2">
+                <div class="card-body">
+                    <h4 class="fs-3 fw-bolder pt-5">Categorias de empresas</h4>
+                    <form asp-action="Index">
+                        <div class="row pt-3">
+                            <div class="col-md-12">
+                                <div class="input-group my-3">
+                                    <input class="form-control" type="text" name="Nombre" placeholder="Buscar">
+                                    <button class="btn btn-primary" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                    <a class="btn btn-outline-success" asp-action="Create">
+                                        <i class="bi bi-plus-circle"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                     <br />
-                    <button type="submit" class="btn btn-outline-primary">Buscar</button>
-                    <a class="btn btn-outline-success" asp-action="Create">Ir a crear</a>
-                </form>
-                <br />
-                <br />
-                <br />
-                <form method="POST">
-                    <table class="table table-head-fixed text-nowrap text-white">
-                        <thead>
-                            <tr>
-                                <th>
-                                    Nombre
-                                </th>
-                                <th>
-                                    Acciones
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var item in Model)
-                            {
-                                <tr>
-                                    <td>
-                                        @Html.DisplayFor(modelItem => item.Nombre)
-                                    </td>
-                                    <td>
-                                        @Html.ActionLink("Detalles", "Details", new {id=item.Id}, new {@class = "btn btn-sm btn--x"})
-                                        @Html.ActionLink("Delete", "Delete", new { id=item.Id}, new {@class = "btn btn-sm btn-outline-danger"})
-                                    </td>
-                                </tr>
-                            }
-                        </tbody>
-                    </table>
-                </form>
+                    <form method="POST">
+                        <div class="pb-2">
+                            <div class="table-responsive">
+                                <table class="table table-dark table-hover table-borderless text-white">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                Nombre
+                                            </th>
+                                            <th>
+                                                Acciones
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Nombre)
+                                                </td>
+                                                <td>
+                                                    @Html.ActionLink("Detalles", "Details", new {id=item.Id}, new {@class = "btn btn-sm btn--x"})
+                                                    @Html.ActionLink("Eliminar", "Delete", new { id=item.Id}, new {@class = "btn btn-sm btn-outline-danger"})
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Jquery JS-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<!-- Vendor JS-->
-<script src="vendor/select2/select2.min.js"></script>
-<script src="vendor/datepicker/moment.min.js"></script>
-<script src="vendor/datepicker/daterangepicker.js"></script>
 <!-- Main JS-->
 <script src="js/global.js"></script>
 
