@@ -10,7 +10,7 @@ namespace UbicaMovil.ArqLimpia.DAL
         public static IServiceCollection AddDALDependecies(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<UbicaMovilDBContext>(options =>
-            options.UseSqlServer(configuration.GetConnectionString("conexionGQ")));
+            options.UseSqlServer(configuration.GetConnectionString("conexionBG")));
 
             services.AddScoped<IEmpresa, EmpresaDAL>();
             services.AddScoped<ICategoria, CategoriaDAL>();
