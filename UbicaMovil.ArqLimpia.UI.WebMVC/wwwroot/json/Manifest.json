@@ -18,7 +18,7 @@
 			"sizes": "512x512"
 		}
 	],
-	"start_url": "/https://localhost:7170/",
+	"start_url": "./../",
 	"background_color": "#3367D6",
 	"display": "standalone",
 	//"scope": "/",
@@ -28,7 +28,7 @@
 			"name": "UbicaMovil",
 			"short_name": "UbicaMovil",
 			"description": "App de geolocalización",
-			"url": "/https://localhost:7170/",
+			"url": "./../",
 			"icons": [
 				{
 					"src": "/img/Ubicacion192.png",
@@ -40,7 +40,7 @@
 			"name": "UbicaMovil",
 			"short_name": "UbicaMovil",
 			"description": "App de geolocacización",
-			"url": "/https://localhost:7170/",
+			"url": "./../",
 			"icons": [
 				{
 					"src": "/img/Ubicacion192.png",

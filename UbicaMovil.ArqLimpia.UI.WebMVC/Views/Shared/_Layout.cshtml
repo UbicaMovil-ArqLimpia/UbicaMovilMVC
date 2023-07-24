@@ -120,6 +120,8 @@
     <div class="">
         <main role="main" class="">
             @RenderBody()
+
+            <button id="instalar-pwa-btn" style="display:none;">Instalar app</button>
         </main>
     </div>
 
@@ -149,7 +151,17 @@
                         console.log('Error al registrar el Service worker:', error);
                     });
             }
-                }
+                };
+    </script>
+    <script>
+        window.addEventListener('beforeinstallprompt', function (event) {
+            event.preventDefault();
+            var botonInstalacion = document.getElementById('instalar-pwa-btn');
+            botonInstalacion.style.display = 'block';
+            botonInstalacion.addEventListener('click', function (){ 
+                event.prompt();
+            });
+        });
     </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
