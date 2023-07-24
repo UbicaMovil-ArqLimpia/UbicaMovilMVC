@@ -286,32 +286,39 @@ h6 {
 /* ==========================================================================
    #BACKGROUND
    ========================================================================== */
-.bg-blue {
-    background: #4e54c8; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #8f94fb, #4e54c8); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #8f94fb, #4e54c8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+/* Edit */
+.bg-gra-editar {
+    background: #00B4DB; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.bg-gra-02 {
-    background: #DA4453; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #89216B, #DA4453); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Details */
+.bg-gra-detalle {
+    background: #FFE000; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #799F0C, #FFE000); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #799F0C, #FFE000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/* Create */
+.bg-gra-crear {
+    background: #e65c00; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #F9D423, #e65c00); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.bg-gra-03 {
-    background: #00b09b; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #96c93d, #00b09b); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Index */
+.bg-gra-inicio {
+    background: #AA076B; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #61045F, #AA076B); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.bg-gra-x {
-    background: #fc4a1a; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.bg-red {
-    background: #fa4251;
+/* Delete */
+.bg-gra-borrar {
+    background: #e52d27; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .bg-gra-01 {
@@ -405,9 +412,55 @@ h6 {
         background: #4dae3c;
     }
 
-.btn--x {
-    background: #302b63;
+/* Index */
+.btn--inicio {
+    background: #AA076B;
 }
+
+    .btn--inicio:hover {
+        background: #6E48AA;
+        color: white;
+    }
+
+/* Create */
+.btn--crear {
+    background: #fc4a1a;
+}
+
+    .btn--crear:hover {
+        background: #f7b733;
+        color: #1a1a1a;
+    }
+
+/* Details */
+.btn--detalle {
+    background: #11998e;
+}
+
+    .btn--detalle:hover {
+        background: #38ef7d;
+        color: #232526;
+    }
+
+/* Edit */
+.btn--editar {
+    background: #1565C0;
+}
+
+    .btn--editar:hover {
+        background: #004e92;
+        color: white;
+    }
+
+/* Delete */
+.btn--borrar {
+    background: #dd1818;
+}
+
+    .btn--borrar:hover {
+        background: #6f0000;
+        color: white;
+    }
 /* ==========================================================================
    #DATE PICKER
    ========================================================================== */

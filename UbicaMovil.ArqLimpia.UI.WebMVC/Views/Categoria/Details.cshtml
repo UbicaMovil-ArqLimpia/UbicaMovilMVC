@@ -5,7 +5,7 @@
 }
 <link href="~/css/xmain.css" rel="stylesheet" media="all">
 
-<div class="py-5 bg-gra-02 font-poppins">
+<div class="py-5 bg-gra-detalle font-poppins">
     <div class="container py-md-5" id="x">
         <div class="container-md">
             <div class="card bg-dark text-white px-3 pt-2">
@@ -23,8 +23,8 @@
                                     </dd>
                                 </div>
                                 <div class="col-12 text-center py-3">
-                                    @Html.ActionLink("Editar", "Edit", new {id = Model.Id}, new {@class = "btn btn-warning"})
-                                    <a class="btn btn-outline-danger" asp-action="Index">Regresar</a><br />
+                                    @Html.ActionLink("Editar", "Edit", new {id = Model.Id}, new {@class = "btn btn-detalle"})
+                                    <a class="btn btn-outline-light" asp-action="Index">Regresar</a><br />
                                     <span style="color:red">@ViewBag.ErrorMessage</span>
                                 </div>
                             </div>

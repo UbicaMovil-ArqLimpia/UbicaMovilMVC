@@ -9,7 +9,7 @@
 
 <link href="~/css/xmain.css" rel="stylesheet" media="all">
 
-<div class="py-5 bg-blue font-poppins">
+<div class="py-5 bg-gra-editar font-poppins">
     <div class="container py-md-5" id="x">
         <div class="container-md">
             <div class="card bg-dark text-white px-3 pt-2">
@@ -24,8 +24,8 @@
                                     <span asp-validation-for="Nombre" class="text-danger"></span>
                                 </div>
                                 <div class="col-12 text-center py-3">
-                                    <button type="submit" class="btn btn-info">Guardar</button>
-                                    <a class="btn btn-outline-primary" asp-action="Index">Regresar</a><br />
+                                    <button type="submit" class="btn btn--editar">Guardar</button>
+                                    <a class="btn btn-outline-light" asp-action="Index">Regresar</a><br />
                                     <span style="color:red">@ViewBag.ErrorMessage</span>
                                 </div>
                             </div>

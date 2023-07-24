@@ -11,7 +11,7 @@
 
 <link href="~/css/xmain.css" rel="stylesheet" media="all">
 
-<div class="py-5 bg-gra-x font-poppins">
+<div class="py-5 bg-gra-inicio font-poppins">
     <div class="container py-md-5" id="x">
         <div class="container-md">
             <div class="card text-center bg-dark text-white px-3 pt-2">
@@ -73,7 +73,7 @@
                                                     @Html.DisplayFor(modelItem => item.IdCategoria)
                                                 </td>
                                                 <td>
-                                                    @Html.ActionLink("Detalles", "Details", new {id=item.Id}, new {@class = "btn btn-sm btn--x"})
+                                                    @Html.ActionLink("Detalles", "Details", new {id=item.Id}, new {@class = "btn btn-sm btn--inicio"})
                                                     @Html.ActionLink("Eliminar", "Delete", new { id=item.Id}, new {@class = "btn btn-sm btn-outline-danger"})
                                                 </td>
                                             </tr>
