@@ -1,52 +1,27 @@
-﻿// JavaScript para manejar el mapa y la ubicación
-let mapa;
-let marcador;
+﻿function initialize() {
+    var marcadores = [
+        ['<h2>Empresa x</h2> <br><h4>Las moras.oriente 12 <br> Tel:9929-2991</h4> ', 13.7257316, -89.3665101],
+        ['<h2>Empresa 2</h2> <br><h4>San Salvador calle 123 <br>Tel:9929-2992</h4> ', 13.68935, -89.18718],
 
-function inicializarMapa() {
-    mapa = new google.maps.Map(document.getElementById("mapa"), {
-        center: { lat: 0, lng: 0 },
-        zoom: 8,
+    ];
+    var map = new google.maps.Map(document.getElementById('mapa'), {
+        zoom: 7,
+        center: new google.maps.LatLng(13.67694, -89.27972),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
     });
-
-    // Obtener la ubicación del usuario
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-            (posicion) => {
-                const ubicacionUsuario = {
-                    lat: posicion.coords.latitude,
-                    lng: posicion.coords.longitude,
-                };
-                mapa.setCenter(ubicacionUsuario);
-                mapa.setZoom(14);
-
-                // Colocar un marcador verde en la ubicación del usuario
-                marcador = new google.maps.Marker({
-                    position: ubicacionUsuario,
-                    map: mapa,
-                    title: "Tu ubicación",
-                    draggable: true, // Permite arrastrar el marcador
-                    icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png', // Icono verde
-                });
-
-                // Escuchar el evento de arrastrar el marcador
-                marcador.addListener("dragend", () => {
-                    actualizarCoordenadas(marcador.getPosition());
-                });
-
-                // Inicializar los campos de entrada con las coordenadas actuales del marcador
-                actualizarCoordenadas(ubicacionUsuario);
-            },
-            () => {
-                alert("No se pudo obtener la ubicación del usuario.");
+    var infowindow = new google.maps.InfoWindow();
+    var marker, i;
+    for (i = 0; i < marcadores.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(marcadores[i][1], marcadores[i][2]),
+            map: map
+        });
+        google.maps.event.addListener(marker, 'click', (function (marker, i) {
+            return function () {
+                infowindow.setContent(marcadores[i][0]);
+                infowindow.open(map, marker);
             }
-        );
-    } else {
-        alert("Tu navegador no soporta geolocalización.");
+        })(marker, i));
     }
 }
-
-// Actualiza los campos de entrada con las coordenadas dadas
-function actualizarCoordenadas(posicion) {
-    document.getElementById("latitud").value = posicion.lat();
-    document.getElementById("longitud").value = posicion.lng();
-}
+google.maps.event.addDomListener(window, 'load', initialize);
