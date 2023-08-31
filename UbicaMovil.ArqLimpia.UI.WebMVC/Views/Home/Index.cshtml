@@ -3,7 +3,6 @@
 }
 
 <link rel="stylesheet" href="~/css/site.css" />
-@*<link rel="stylesheet" href="~/css/not.css" />*@
 
 <div class="container">
     <div class="text-center pt-5 mt-2">
@@ -68,30 +67,4 @@
 
 <!-- Inicializar el mapa al cargar la página -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCum27trvMaz6TpLQlZzF7521lkn-4EPt0&callback=initMap&libraries=places,directions"></script>
-
 <script src="~/js/site.js"></script>
-@*<body>
-    <button id="butInstall" aria-label="Install" hidden>Instalar app</button>
-    <div id="main"></div>
-
-    <script>
-        if ('ServiceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('Service-worker.js').then((reg) => {
-                    console.log("Service worker registered", reg);
-                })
-            })
-        }
-    </script>
-
-    <div id="cookie-notice" class="cookie-notification">
-        <div class="container">
-
-            <div class="wp-block-column cookie-content">
-                <div class="ct-cookies-content">Descarga gratis UbicaMovil para Android. Todos los mapas en tu bolsillo</div>
-            </div>
-            <button class="ct-accept" onclick="acceptCookie();">Descargar</button><button class="ct-close" onclick="myFunction()">×</button>
-        </div>
-    </div>
-    <script src="~/js/not.js"></script>
-</body>*@
